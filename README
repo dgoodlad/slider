@@ -1,0 +1,5 @@
+Slider is a simple Ruby module to allow a presenter to create and view a
+slideshow using only a terminal emulator. It requires the use of the console
+application 'figlet' to draw the fancy headings.
+
+This code is provided under the MIT license, included in the file MIT-LICENSE
