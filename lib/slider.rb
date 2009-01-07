@@ -1,9 +1,21 @@
 module Slider
-  COLUMNS = 80
-  ROWS    = 24
+  
+  @@columns = 80
+  @@rows = 24
+    
+  #COLUMNS = 105
+  #ROWS    = 30
   VERTICAL_PADDING = 10
   FIGLET_FONT = 'standard'
 
+  def set_columns(c)
+    @@columns = c
+  end
+  
+  def set_rows(r)
+    @@rows = r
+  end
+  
   def slide(heading, *text)
     @slides ||= []
     @slides << [heading] + text
@@ -23,11 +35,11 @@ module Slider
   def render_slide(heading, *text)
     heading = `figlet -f #{FIGLET_FONT} #{heading}`
     width = heading.map { |line| line.length }.max
-    padding = " " * ((COLUMNS - width) / 2)
+    padding = " " * ((@@columns - width) / 2)
     heading = heading.map { |line| "#{padding}#{line}" }
     heading_height = heading.size
     text = text.map { |line|
-      padding = " " * ((COLUMNS - line.length) / 2)
+      padding = " " * ((@@columns - line.length) / 2)
       "#{padding}#{line}\n"
     }
 
@@ -35,7 +47,7 @@ module Slider
     result << heading.join
     result << "\n"
     result << text.join
-    result << "\n" * (ROWS - VERTICAL_PADDING - heading_height - text.size)
+    result << "\n" * (@@rows - VERTICAL_PADDING - heading_height - text.size)
     result
   end
 
