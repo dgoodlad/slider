@@ -10,6 +10,9 @@ set_columns 105
 - Set the # of rows in your terminal window (default is 24).
 set_rows 30
 
+- Set the FIGlet font of choice.  See the FIGlet man page for more info.
+set_figlet_font 'bubble'
+
 Create slides:
 - Set the header (first argument), and sub-points (subsequent arguments) each
 separated by a comma.
