@@ -2,4 +2,22 @@ Slider is a simple Ruby module to allow a presenter to create and view a
 slideshow using only a terminal emulator. It requires the use of the console
 application 'figlet' to draw the fancy headings.
 
+Configuration:
+
+- Set the # of columns in your terminal window (default is 80).
+set_columns 105
+
+- Set the # of rows in your terminal window (default is 24).
+set_rows 30
+
+Create slides:
+- Set the header (first argument), and sub-points (subsequent arguments) each
+separated by a comma.
+
+slide "Slider", "It's cool!"
+
+Run the show:
+
+start_slideshow
+
 This code is provided under the MIT license, included in the file MIT-LICENSE
