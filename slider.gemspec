@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "slider"
-  s.version     = "0.1.0"
+  s.version     = "0.1.1"
   s.date        = "2008-11-07"
   s.summary     = "Text-based slideshow creation and playback"
   s.email       = "david@goodlad.ca"
